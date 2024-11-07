@@ -1,0 +1,18 @@
+{
+  "name": "to-do-app-demo-for-Render.js",
+  "version": "1.0.0",
+  "description": "Simple To-Do List web application. Created for Render.js demo.",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run compile && npm run bundle",
+    "bundle": "node_modules/esbuild/bin/esbuild --bundle --tsconfig=./tsconfig.json ./dist/main.js --outfile=./app.js",
+    "bundle:min": "node_modules/esbuild/bin/esbuild --bundle --minify --tsconfig=./tsconfig.json ./dist/main.js --outfile=./app.js",
+    "compile": "node node_modules/typescript/lib/tsc.js --project tsconfig.json"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "esbuild": "^0.24.0",
+    "typescript": "^5.6.3"
+  }
+}
